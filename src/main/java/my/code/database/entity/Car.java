@@ -1,5 +1,11 @@
 package my.code.database.entity;
 
+import lombok.*;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Car {
 
     private Long id;

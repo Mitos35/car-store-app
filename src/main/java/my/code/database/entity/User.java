@@ -1,7 +1,15 @@
 package my.code.database.entity;
 
+import lombok.*;
+
 import java.util.Set;
 
+@Getter
+@Setter
+@Builder
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
 
     private Long id;
