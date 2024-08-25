@@ -16,3 +16,7 @@ spring:
     url: jdbc:postgresql://localhost:5432/car_store_db
     username: postgres
     password: postgres
+
+client:
+  userapi:
+    url: http://jsonplaceholder.typicode.com

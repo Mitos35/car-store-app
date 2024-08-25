@@ -1,5 +1,5 @@
 plugins {
-    id 'groovy'
+    id 'java'
     id 'org.springframework.boot' version '3.3.2'
     id 'io.spring.dependency-management' version '1.1.6'
 }
@@ -18,17 +18,19 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
 
-    implementation "org.mapstruct:mapstruct:$mapStructVersion"
+    implementation "org.springframework.cloud:spring-cloud-starter-openfeign:$openfeignVersions"
+    implementation "org.modelmapper.extensions:modelmapper-spring:$modelMapperVersion"
+    implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:$springDocVersions"
 
     implementation "org.postgresql:postgresql:$postgresVersion"
 
     compileOnly "org.projectlombok:lombok:$lombokVersion"
     annotationProcessor "org.projectlombok:lombok:$lombokVersion"
-    annotationProcessor "org.mapstruct:mapstruct-processor:$mapStructVersion"
 
     testCompileOnly "org.projectlombok:lombok:$lombokVersion"
     testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
